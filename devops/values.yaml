@@ -1,6 +1,6 @@
 repositoryName: base-repository
 repositoryOwner: athaydaooo
-imageTag: latest
+imageTag: 56ae84bc4e00fe1d0e1dcdbdc04ba08f5439b5b7
 replicaCount: 3
 service:
   enabled: true
@@ -10,12 +10,7 @@ service:
 ingress:
   enabled: true
   className: 'nginx'
-  annotations:
-    {
-      nginx.ingress.kubernetes.io/ssl-redirect: 'true',
-      nginx.ingress.kubernetes.io/force-ssl-redirect: 'true',
-      nginx.ingress.kubernetes.io/rewrite-target: /,
-    }
+  annotations: {nginx.ingress.kubernetes.io/ssl-redirect: 'true', nginx.ingress.kubernetes.io/force-ssl-redirect: 'true', nginx.ingress.kubernetes.io/rewrite-target: /}
   hosts:
     - host: subdomain.domain.com
       paths:
